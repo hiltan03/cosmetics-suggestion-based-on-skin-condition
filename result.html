@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Type Result</title>
+</head>
+<body>
+    <h1>Classification Result</h1>
+    
+    <h2>Uploaded Image:</h2>
+    <img src="{{ user_image }}" alt="Uploaded Image" width="300px">
+    
+    <h2>Skin Type: {{ skin_type }}</h2>
+    
+    <h2>Recommended Product:</h2>
+    <img src="{{ url_for('static', filename='products/' + product_image) }}" 
+         alt="Recommended Product" width="300px">
+    
+    <br><br>
+    <a href="/">Upload Another Image</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Type Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .image-container {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .skin-type {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Skin Type Classification</h1>
+
+        <h2>Uploaded Image:</h2>
+        <div class="image-container">
+            <img src="{{ user_image }}" alt="Uploaded Image">
+        </div>
+
+        <h2 class="skin-type">Skin Type: {{ skin_type }}</h2>
+
+        <h2>Recommended Product:</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='products/' + product_image) }}" 
+                 alt="Recommended Product">
+        </div>
+
+        <a href="/" class="btn">Upload Another Image</a>
+    </div>
+
+</body>
+</html>
+
